@@ -1,4 +1,3 @@
-Certainly! Let's incorporate the `header.component.ts` content into the existing README and regenerate it:
 
 # Header Component HTML
 
