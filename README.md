@@ -3,6 +3,10 @@
 
 This is the HTML template file for the Angular component `HeaderComponent`. It defines the structure and layout of the header navigation bar for the application. The header contains a logo, a toggle button to open an off-canvas menu, and a list of menu items.
 
+Click [here](/CHANGELOG.md) for the CHANGE LOG
+
+Click [here](/CLIFF_NOTES.md) for the CLIFF NOTES
+
 ## Usage
 
 To use this component in your Angular application, follow these steps:
