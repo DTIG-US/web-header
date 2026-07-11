@@ -1,7 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import * as siteData from '../../data.json'
+import { CommonModule } from '@angular/common';
+
 @Component({
   selector: 'app-header',
+  standalone: true as boolean,
+  imports: [CommonModule],
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
