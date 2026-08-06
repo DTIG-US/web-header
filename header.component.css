@@ -1,3 +1,109 @@
-.navbar{
-  background: #18141D;
+/* ─── Navbar Shell ───────────────────────────────────── */
+.nav-shell {
+  background: rgba(10, 15, 44, 0.92);
+  backdrop-filter: blur(14px) saturate(1.4);
+  -webkit-backdrop-filter: blur(14px) saturate(1.4);
+  border-bottom: 1px solid rgba(125, 249, 255, 0.18);
+  padding: 0.6rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1030;
+}
+
+/* ─── Logo ───────────────────────────────────────────── */
+.nav-logo-img {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* ─── MENU Button ────────────────────────────────────── */
+.nav-menu-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 20px;
+  font-family: 'Inter', Helvetica, sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #0a0f2c;
+  background: linear-gradient(135deg, #7df9ff 0%, #00c8d4 100%);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  box-shadow: 0 0 16px rgba(125, 249, 255, 0.4), 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: box-shadow 0.25s ease, transform 0.2s ease, background 0.25s ease;
+}
+
+.nav-menu-btn:hover,
+.nav-menu-btn:focus-visible {
+  background: linear-gradient(135deg, #a0fbff 0%, #00e0ee 100%);
+  box-shadow: 0 0 28px rgba(125, 249, 255, 0.7), 0 6px 18px rgba(0, 0, 0, 0.35);
+  transform: translateY(-1px);
+  outline: none;
+}
+
+.nav-menu-btn:focus-visible {
+  outline: 2px solid #7df9ff;
+  outline-offset: 3px;
+}
+
+/* ─── Offcanvas Panel ────────────────────────────────── */
+.offcanvas {
+  background: #0a0f2c !important;
+  border-left: 1px solid rgba(125, 249, 255, 0.15) !important;
+}
+
+.offcanvas-header {
+  border-bottom: 1px solid rgba(125, 249, 255, 0.1);
+  padding: 1.25rem 1.5rem;
+}
+
+.offcanvas-title {
+  font-family: 'Outfit', 'Inter', Helvetica, sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -0.01em;
+}
+
+/* Override Bootstrap close button to be visible on dark bg */
+.offcanvas-header .btn-close {
+  filter: invert(1) brightness(0.7);
+}
+
+/* ─── Offcanvas Nav Links ─────────────────────────────── */
+.offcanvas-nav {
+  list-style: none;
+  padding: 1rem 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.offcanvas-nav li a {
+  display: block;
+  padding: 0.65rem 1.5rem;
+  font-family: 'Inter', Helvetica, sans-serif;
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: rgba(200, 220, 255, 0.75);
+  text-decoration: none;
+  border-left: 3px solid transparent;
+  transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+.offcanvas-nav li a:hover,
+.offcanvas-nav li a:focus-visible {
+  color: #7df9ff;
+  border-left-color: #7df9ff;
+  background: rgba(125, 249, 255, 0.05);
+  outline: none;
+}
+
+.offcanvas-nav li a:focus-visible {
+  text-decoration: underline;
+  text-decoration-color: #7df9ff;
 }

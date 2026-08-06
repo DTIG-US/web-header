@@ -1,23 +1,47 @@
-<nav class="navbar navbar-dark">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#"><img src="{{headerData.logo}}" alt="Logo" width="auto" height="auto" class="d-inline-block align-text-top"> </a>
-    <button class=" align-items-center btn btn-primary " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-      <span class="me-2"><b>MENU</b></span>
-<!--      <span class="navbar-toggler-icon"></span>-->
-    </button>
-    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-      <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">{{headerData.title}}</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-      </div>
-      <div class="offcanvas-body">
-        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3" *ngFor="let elem of headerData.menu">
+<nav class="nav-shell navbar" aria-label="Main navigation">
+  <div class="container-fluid px-4">
 
-          <li class="nav-item">
-            <a class="nav-link text-black" href="{{elem.url}}">{{elem.label}}</a>
-          </li>
+    <!-- ─── Logo ──────────────────────────────────────── -->
+    <a class="navbar-brand" href="/" aria-label="{{ headerData.title }} home">
+      <img [src]="headerData.logo"
+           alt="{{ headerData.title }} logo"
+           class="nav-logo-img" />
+    </a>
+
+    <!-- ─── MENU Trigger ──────────────────────────────── -->
+    <button class="nav-menu-btn"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNav"
+            aria-controls="offcanvasNav"
+            aria-label="Open navigation menu">
+      <span aria-hidden="true">&#9776;</span> MENU
+    </button>
+
+    <!-- ─── Offcanvas Panel ───────────────────────────── -->
+    <div class="offcanvas offcanvas-end"
+         tabindex="-1"
+         id="offcanvasNav"
+         aria-labelledby="offcanvasNavLabel">
+
+      <div class="offcanvas-header">
+        <h2 class="offcanvas-title" id="offcanvasNavLabel">{{ headerData.title }}</h2>
+        <button type="button"
+                class="btn-close"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close navigation menu"></button>
+      </div>
+
+      <div class="offcanvas-body">
+        <ul class="offcanvas-nav" aria-label="Site navigation">
+          @for (item of headerData.menu; track item.url) {
+            <li>
+              <a [href]="item.url">{{ item.label }}</a>
+            </li>
+          }
         </ul>
       </div>
+
     </div>
   </div>
 </nav>
