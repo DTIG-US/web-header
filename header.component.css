@@ -7,7 +7,7 @@
   padding: 0.4rem 0;
   position: sticky;
   top: 0;
-  z-index: 1030;
+  z-index: 1060;
 }
 
 /* ─── Logo ───────────────────────────────────────────── */
@@ -52,8 +52,14 @@
 
 /* ─── Offcanvas Panel ────────────────────────────────── */
 .offcanvas {
+  position: fixed !important;
+  top: 0 !important;
+  right: 0;
+  bottom: 0;
+  height: 100vh !important;
   background: #0a0f2c !important;
   border-left: 1px solid rgba(125, 249, 255, 0.15) !important;
+  overflow: hidden;
 }
 
 .offcanvas-header {
