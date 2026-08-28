@@ -38,6 +38,15 @@
   position: sticky;
   top: 0;
   z-index: 1060;
+  color: var(--ih-header-text, inherit);
+}
+
+.nav-shell a {
+  color: var(--ih-header-link, inherit);
+}
+
+.nav-shell a:hover {
+  color: var(--ih-header-link-hover, inherit);
 }
 
 /* ─── Logo ───────────────────────────────────────────── */
