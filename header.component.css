@@ -6,6 +6,11 @@
   --ih-header-padding: 0.4rem 0;
   --ih-header-logo-height: 40px;
 
+
+  /* Slogan Defaults */
+  --ih-header-slogan-color: var(--ih-header-custom-slogan-color, var(--ih-color-text-primary, inherit));
+  --ih-header-slogan-font: var(--ih-header-custom-slogan-font, 'Inter', Helvetica, sans-serif);
+
   /* Button Tokens */
   --ih-header-btn-font: var(--ih-font-sans, 'Inter', Helvetica, sans-serif);
   --ih-header-btn-color: var(--ih-color-primary, #0a0f2c);
@@ -55,6 +60,16 @@
   width: auto;
   object-fit: contain;
 }
+
+
+/* ─── Slogan ───────────────────────────────────────────── */
+.nav-shell a.slogan {
+  font-family: var(--ih-header-slogan-font);
+  color: var(--ih-header-slogan-color);
+  font-size: 0.8rem;
+}
+
+
 
 /* ─── MENU Button ────────────────────────────────────── */
 .nav-menu-btn {
@@ -152,4 +167,3 @@
   text-decoration: underline;
   text-decoration-color: var(--ih-header-drawer-link-active-color);
 }
-

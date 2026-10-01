@@ -3,41 +3,34 @@
 
     <!-- ─── Logo ──────────────────────────────────────── -->
     <a class="navbar-brand" href="/" aria-label="{{ headerData.title }} home">
-      <img [src]="headerData.logo"
-           alt="{{ headerData.title }} logo"
-           class="nav-logo-img" />
+      <img [src]="headerData.logo" alt="{{ headerData.title }} logo" class="nav-logo-img" />
+    </a>
+
+    <!-- ─── Slogan ────────────────────────────────────── -->
+    <a class="slogan" aria-label="{{ headerData.slogan }}">
+      {{ headerData.slogan }}
     </a>
 
     <!-- ─── MENU Trigger ──────────────────────────────── -->
-    <button class="nav-menu-btn"
-            type="button"
-            data-bs-toggle="offcanvas"
-            data-bs-target="#offcanvasNav"
-            aria-controls="offcanvasNav"
-            aria-label="Open navigation menu">
+    <button class="nav-menu-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNav"
+      aria-controls="offcanvasNav" aria-label="Open navigation menu">
       <span aria-hidden="true">&#9776;</span> MENU
     </button>
 
     <!-- ─── Offcanvas Panel ───────────────────────────── -->
-    <div class="offcanvas offcanvas-end"
-         tabindex="-1"
-         id="offcanvasNav"
-         aria-labelledby="offcanvasNavLabel">
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNav" aria-labelledby="offcanvasNavLabel">
 
       <div class="offcanvas-header">
         <h2 class="offcanvas-title" id="offcanvasNavLabel">{{ headerData.title }}</h2>
-        <button type="button"
-                class="btn-close"
-                data-bs-dismiss="offcanvas"
-                aria-label="Close navigation menu"></button>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close navigation menu"></button>
       </div>
 
       <div class="offcanvas-body">
         <ul class="offcanvas-nav" aria-label="Site navigation">
           @for (item of headerData.menu; track item.url) {
-            <li>
-              <a [href]="item.url">{{ item.label }}</a>
-            </li>
+          <li>
+            <a [href]="item.url">{{ item.label }}</a>
+          </li>
           }
         </ul>
       </div>

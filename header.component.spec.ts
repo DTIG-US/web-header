@@ -28,7 +28,7 @@ describe('HeaderComponent', () => {
     expect(logoImg.src).toContain(component.headerData.logo);
     expect(logoImg.alt).toBe(`${component.headerData.title} logo`);
   });
-
+  
   it('should render the MENU trigger button pointing to offcanvasNav', () => {
     const compiled = fixture.nativeElement as HTMLElement;
     const menuBtn = compiled.querySelector('.nav-menu-btn') as HTMLButtonElement;
